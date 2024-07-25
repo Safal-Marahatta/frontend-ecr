@@ -52,6 +52,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: ${{ secrets.EC2_PORT }}
           script: |
+            aws ecr get-login-password --region ap-southeast-1 | sudo docker login --username AWS --password-stdin 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com
             sudo docker pull 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/safal-frontend:latest
             sudo docker stop frontend || true
             sudo docker rm frontend || true
