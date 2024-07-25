@@ -42,7 +42,7 @@ function App() {
         <form onSubmit={handleSubmit}>
           <input
             type="text"
-            placeholder="Enter your name"
+            placeholder="Enter your name ok"
             value={name}
             onChange={handleInputChange}
             required
